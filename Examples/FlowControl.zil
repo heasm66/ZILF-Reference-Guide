@@ -23,7 +23,7 @@
         (ZIP <TELL "ZIP">)
         (EZIP <TELL "EZIP">)
         (ELSE <TELL "XZIP+">)
-    >        
+    >   
     <TELL " - DO-FUNNY-RETURN? = ">
     <COND (,FUNNY-RETURN? <TELL "TRUE" CR CR>)(ELSE TELL "FALSE" CR CR)>
     <TEST-ROUTINE-1>
@@ -41,6 +41,8 @@
     <TEST-PASCAL-STYLE>
     <TEST-C-STYLE>
     <TEST-MIXED-STYLE>
+    <TEST-MAP-CONTENTS>
+    <TEST-MAP-DIRECTIONS>
 >
 
 ;"-----------------------------------------
@@ -116,7 +118,7 @@
             <RETURN T .ACT>)>                   ;"RETURN with ACTIVATION will exit ROUTINE (FUNNY-RETURN = TRUE)"
         <AGAIN .ACT>                            ;"AGAIN with ACTIVATION will redo BLOCK"
     >
-    <TELL "RETURN EXIT BLOCK" CR CR>            ;"Will never be reached"
+    <TELL "RETURN EXIT BLOCK" CR CR>
 >
 
 ;"-----------------------------------------
@@ -164,7 +166,7 @@
             <RETURN T>)>             ;"RETURN with value but without ACTIVATION will exit ROUTINE (FUNNY-RETURN = TRUE)"
         <AGAIN>                      ;"AGAIN without ACTIVATION will redo BLOCK"
     >
-    <TELL "RETURN EXIT BLOCK" CR CR> ;"Will never be reached"
+    <TELL "RETURN EXIT BLOCK" CR CR>
 >
 
 ;"-----------------------------------------
@@ -175,7 +177,7 @@
    - Automatic AGAIN
   -----------------------------------------"
 
-;"AGAIN, Bare RETURN without ACTIVATION"
+;"Bare RETURN without ACTIVATION"
 <ROUTINE TEST-REPEAT-1 ()
     <TELL "REPEAT: Bare RETURN without ACTIVATION" CR>
     <TELL "START: ">
@@ -191,21 +193,21 @@
 <ROUTINE TEST-REPEAT-2 ()
     <TELL "REPEAT: RETURN value but without ACTIVATION" CR>
     <TELL "START: ">
-    <PROG ((X 0))                    ;"X is not reinitialized between iterations Default ACTIVATION created."
+    <REPEAT ((X 0))                    ;"X is not reinitialized between iterations Default ACTIVATION created."
         <SET X <+ .X 1>>
         <TELL N .X " ">
         <COND (<=? .X 3> 
             <COND (,FUNNY-RETURN? <TELL "RETURN EXIT ROUTINE" CR CR>)>
-            <RETURN T>)>             ;"RETURN with value but without ACTIVATION will exit BLOCK (FUNNY-RETURN = TRUE)"
+            <RETURN T>)>             ;"RETURN with value but without ACTIVATION will exit ROUTINE (FUNNY-RETURN = TRUE)"
     >                                ;"Automatic AGAIN at end of block"
-    <TELL "RETURN EXIT BLOCK" CR CR> ;"Will never be reached"
+    <TELL "RETURN EXIT BLOCK" CR CR>
 >
 
 ;"-----------------------------------------
    DO
    - Defines block of code
    - Own set of atoms
-   - Default ACTIVATION (no manual possible)
+   - Default ACTIVATION (no manual possibl
    - Automatic AGAIN until exit-condition reached
   -----------------------------------------"
 
@@ -379,3 +381,67 @@
         <TELL " " N .I>>
     
     <CRLF>>
+
+;"-----------------------------------------
+   MAP-CONTENTS
+   - 
+  -----------------------------------------"
+<OBJECT SURVIVAL-KIT 
+    (DESC "adventure survival kit") (WEIGHT 10)>
+<OBJECT SWORD 
+    (IN SURVIVAL-KIT) (DESC "sword") (WEIGHT 10)>
+<OBJECT LAMP 
+    (IN SURVIVAL-KIT) (DESC "brass lamp") (WEIGHT 5)>
+<OBJECT SPOON 
+    (IN SURVIVAL-KIT) (DESC "chrome spoon") (WEIGHT 2)>
+
+<ROUTINE TEST-MAP-CONTENTS ()
+    <TELL "Your " D ,SURVIVAL-KIT " contains:" CR>
+    <MAP-CONTENTS (F ,SURVIVAL-KIT)
+        <TELL "    a " D .F CR>
+    >
+    
+    <TELL "Your " D ,SURVIVAL-KIT " contains:" CR>
+    <MAP-CONTENTS (F N ,SURVIVAL-KIT)
+        <TELL "    a " D .F >
+        <COND (.N <TELL " (next item is the " D .N ")">)>
+        <TELL CR>
+    >
+    
+    <BIND ((W 0))
+        <SET W <GETP ,SURVIVAL-KIT ,P?WEIGHT>>
+        <MAP-CONTENTS (F ,SURVIVAL-KIT)
+                      (END <TELL "Total weight is = " N .W CR CR>)
+            <SET W <+ .W <GETP .F ,P?WEIGHT>>>
+        >
+    >
+>
+
+;"-----------------------------------------
+   MAP-DIRECTIONS
+   - 
+  -----------------------------------------"
+
+<DIRECTIONS NORTH SOUTH EAST WEST>
+<OBJECT CENTER (DESC "center room")  
+    (NORTH TO N-ROOM) 
+    (WEST TO W-ROOM)>
+<OBJECT N-ROOM (DESC "north room")>
+<OBJECT W-ROOM (DESC "west room")>
+
+<ROUTINE TEST-MAP-DIRECTIONS ()
+    <TELL "You're in the " D ,CENTER>
+    <TELL CR "Obvious exits:" CR>
+    <MAP-DIRECTIONS (D P ,CENTER)
+        (END <TELL "Room description done." CR>)
+        <COND (<EQUAL? .D ,P?NORTH> <TELL "    North">)
+              (<EQUAL? .D ,P?SOUTH> <TELL "    South">)
+              (<EQUAL? .D ,P?EAST> <TELL "    East">)
+              (<EQUAL? .D ,P?WEST> <TELL "    West">)
+        >
+        <VERSION?
+            (ZIP <TELL " to the " D <GETB .P ,REXIT> CR>)
+            (ELSE <TELL " to the " D <GET .P ,REXIT> CR>)
+        >
+    >
+>    
