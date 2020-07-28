@@ -29,3 +29,6 @@ The information comes mostly from:
   
   *The Inform Designer’s Manual, Graham Nelson*
   https://www.inform-fiction.org/manual/about_dm4.html
+  
+  *ZIP: Z-language Interpreter Program by Joel Berez, Marc Blank, and David Lebling*
+  https://github.com/heasm66/YZIP-Specifications
