@@ -17,6 +17,7 @@ The information comes mostly from:
   https://github.com/heasm66/ZIL-Resources/blob/master/Learning_ZIL.pdf
   
   *ZIL Course, Marc S. Blank*
+  https://github.com/heasm66/ZIL-Resources/blob/master/ZILCourse.pdf
   
   *The MDL Programming Language, S. W. Galley and Greg Pfister*
   https://mdl-language.readthedocs.io/en/latest/
