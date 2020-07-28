@@ -14,7 +14,7 @@ The information comes mostly from:
   https://foss.heptapod.net/zilf/zilf/-/blob/branch/default/doc/quickref.txt
   
   *Learning ZIL, Steve E. Meretzky*
-  https://archive.org/details/Learning_ZIL_Steven_Eric_Meretzky_1995/mode/2up
+  https://github.com/heasm66/ZIL-Resources/blob/master/Learning_ZIL.pdf
   
   *ZIL Course, Marc S. Blank*
   
@@ -25,10 +25,10 @@ The information comes mostly from:
   https://foss.heptapod.net/zilf/zilf/-/blob/branch/default/doc/ZIL%20Language%20Guide.odt
   
   *The Z-Machine Standards Document, Graham Nelson*
-  https://www.inform-fiction.org/zmachine/standards/z1point1/index.html
+  https://github.com/heasm66/ZIL-Resources/blob/master/z-spec10.pdf
   
   *The Inform Designer’s Manual, Graham Nelson*
-  https://www.inform-fiction.org/manual/about_dm4.html
+  https://github.com/heasm66/ZIL-Resources/blob/master/DM4.pdf
   
   *ZIP: Z-language Interpreter Program by Joel Berez, Marc Blank, and David Lebling*
   https://github.com/heasm66/YZIP-Specifications
