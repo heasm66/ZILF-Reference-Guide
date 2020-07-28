@@ -11,6 +11,7 @@ This is a first draft with lots of placeholders at the moment.
 The information comes mostly from:
 
   *ZILF Quick Reference, Jesse McGrew*
+  https://foss.heptapod.net/zilf/zilf/-/blob/branch/default/doc/quickref.txt
   
   *Learning ZIL, Steve E. Meretzky*
   
