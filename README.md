@@ -8,7 +8,9 @@ the commands and their usage.
 
 This is a first draft with lots of placeholders at the moment.
 
-The information comes mostly from:
+The working document is currently at Google Docs here: https://docs.google.com/document/d/11Kz3tknK05hb0Cw41HmaHHkgR9eh0qNLAbE9TzZe--c/edit?usp=sharing
+
+The information in this document is mostly from:
 
   *ZILF Quick Reference, Jesse McGrew*  
   https://foss.heptapod.net/zilf/zilf/-/blob/branch/default/doc/quickref.txt
