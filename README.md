@@ -6,7 +6,9 @@ of the command and some short examples to illustrate how the command is used.
 This is not meant to be a designer manual but just a reference of the syntax of 
 the commands and their usage.
 
-This is a first draft with lots of placeholders at the moment.
+81 entries left (in the MDL section).
+
+The ODT-file is automatically generatet from Google Docs and have formatting issues.
 
 The working document is currently at Google Docs here: https://docs.google.com/document/d/11Kz3tknK05hb0Cw41HmaHHkgR9eh0qNLAbE9TzZe--c/edit?usp=sharing
 
