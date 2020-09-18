@@ -1,4 +1,4 @@
-# ZIL Reference Guide
+# ZILF Reference Guide
 
 The goal is to list all commands in the ZILF developing environment with a short description 
 of the command and some short examples to illustrate how the command is used.
