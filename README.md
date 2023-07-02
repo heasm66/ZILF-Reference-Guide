@@ -14,7 +14,7 @@ The working document is currently at Google Docs here: https://docs.google.com/d
 
 The information in this document is mostly from:
 
-  *ZILF Quick Reference, Jesse McGrew*  
+  *ZILF Quick Reference, Tara McGrew*  
   https://foss.heptapod.net/zilf/zilf/-/blob/branch/default/doc/quickref.txt
   
   *Learning ZIL, Steve E. Meretzky*  
@@ -26,7 +26,7 @@ The information in this document is mostly from:
   *The MDL Programming Language, S. W. Galley and Greg Pfister*  
   https://mdl-language.readthedocs.io/en/latest/
   
-  *ZIL Language Guide, Jesse McGrew*  
+  *ZIL Language Guide, Tara McGrew*  
   https://foss.heptapod.net/zilf/zilf/-/blob/branch/default/doc/ZIL%20Language%20Guide.odt
   
   *The Z-Machine Standards Document, Graham Nelson*  
