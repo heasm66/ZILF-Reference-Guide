@@ -38,5 +38,5 @@ Reference list and other ZIL resources:
   *ZIP: Z-language Interpreter Program by Joel Berez, Marc Blank, and David Lebling*  
   https://github.com/heasm66/YZIP-Specifications
   
-  *ZIL Programming for Interactive Fiction: A Technical Guide*  
+  *ZIL Programming for Interactive Fiction: A Technical Guide by Jason Self*  
   https://jxself.org/git/?p=zil-guide.git;a=summary
