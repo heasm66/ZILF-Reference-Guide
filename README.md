@@ -12,7 +12,7 @@ The ODT-file is automatically generatet from Google Docs and have formatting iss
 
 The working document is currently at Google Docs here: https://docs.google.com/document/d/11Kz3tknK05hb0Cw41HmaHHkgR9eh0qNLAbE9TzZe--c/edit?usp=sharing
 
-The information in this document is mostly from:
+Reference list and other ZIL resources:
 
   *ZILF Quick Reference, Tara McGrew*  
   https://foss.heptapod.net/zilf/zilf/-/blob/branch/default/doc/quickref.txt
@@ -37,3 +37,6 @@ The information in this document is mostly from:
   
   *ZIP: Z-language Interpreter Program by Joel Berez, Marc Blank, and David Lebling*  
   https://github.com/heasm66/YZIP-Specifications
+  
+  *ZIL Programming for Interactive Fiction: A Technical Guide*  
+  https://jxself.org/git/?p=zil-guide.git;a=summary
